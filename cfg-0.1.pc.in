@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libcfg
+Description: Library for working with configuration data.
+Requires: gio-2.0 json-glib-1.0 libxml-2.0
+Version: @VERSION@
+Libs: -L${libdir} -lcfg-0.1 -ljson-glib-1.0 -lgio-2.0 -lxml2
+Cflags: -I${includedir}/cfg-0.1 -I${libdir}/cfg-0.1/include -I/usr/include/libxml2
