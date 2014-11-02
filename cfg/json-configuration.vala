@@ -19,13 +19,8 @@
  */
 
 /**
- * A common interface inherited by any object that functions as a
- * configuration node.
+ * FIXME: Needs documentation.
  */
-[GenericAccessors]
-public interface Cfg.Node : GLib.Object {
+public class Cfg.JsonConfiguration : GLib.Object {
 
-    public abstract void add_child (Cfg.Node node) throws Cfg.Error;
-
-    public abstract uchar[] serialize () throws Cfg.Error;
 }

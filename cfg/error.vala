@@ -19,13 +19,39 @@
  */
 
 /**
- * A common interface inherited by any object that functions as a
- * configuration node.
+ * Error domains for libcfg.
  */
-[GenericAccessors]
-public interface Cfg.Node : GLib.Object {
+namespace Cfg {
+    /**
+     * A general error domain.
+     */
+    public errordomain Error {
+        NAMESPACE_NOT_FOUND,
+        NODE_NOT_FOUND,
+        KEY_EXISTS
+    }
 
-    public abstract void add_child (Cfg.Node node) throws Cfg.Error;
+    /**
+     * Error domain for file operations.
+     */
+    public errordomain FileError {
+        ACCESS,
+        FILE_NOT_FOUND
+    }
 
-    public abstract uchar[] serialize () throws Cfg.Error;
+    /**
+     * Error types for XML configurations.
+     */
+    public errordomain XmlError {
+        XML_DOCUMENT_EMPTY,
+        INVALID_XPATH_EXPR
+    }
+
+    /**
+     * Error types for JSON configurations.
+     */
+    public errordomain JsonError {
+        JSON_DOCUMENT_EMPTY,
+        INVALID_JSON_PATH_EXPR
+    }
 }

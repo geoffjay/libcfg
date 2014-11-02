@@ -51,6 +51,10 @@ PKG_CHECK_MODULES([GLIB], [glib-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUI
 		[AC_MSG_ERROR(glib-2.12 is required)])
 	])
 
+PKG_CHECK_MODULES([GEE], [gee-0.8],
+    [VALA_PACKAGES="$VALA_PACKAGES --pkg gee-0.8"],
+    [AC_MSG_ERROR(gee-0.8 is required)])
+
 PKG_CHECK_MODULES([GIO], [gio-2.0],
     [VALA_PACKAGES="$VALA_PACKAGES --pkg gio-2.0"],
 	[AC_MSG_ERROR(gio-2.0 is required)])
@@ -70,6 +74,7 @@ dnl Build Options
 dnl ---------------------------------------------------------------------------
 
 dnl Debugging
+dnl FIXME: I don't think this works
 AC_ARG_ENABLE(debug,
 	AS_HELP_STRING([--enable-debug],
 		[Enable debugging (default: disabled)]),,
@@ -110,6 +115,6 @@ GOBJECT_INTROSPECTION_CHECK([0.9.0])
 AC_OUTPUT([Makefile
            cfg-0.1.pc
            cfg/Makefile
+           docs/Makefile
            examples/Makefile
-           tests/Makefile
            vapi/Makefile])

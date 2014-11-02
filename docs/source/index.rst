@@ -10,8 +10,13 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
+   :titlesonly:
+   :glob:
+   :hidden:
 
-
+   installation.rst
+   using.rst
 
 Indices and tables
 ==================

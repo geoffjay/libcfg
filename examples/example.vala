@@ -13,8 +13,6 @@ class Cfg.Example : GLib.Object {
         set { _xml = value; }
     }
 
-    //protected Cfg.Context context;
-
     public Example () { }
 
     public virtual void run () {

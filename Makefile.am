@@ -15,7 +15,6 @@ endif
 
 SUBDIRS = \
 	cfg \
-	tests \
 	vapi \
 	$(DOC_SUBDIR) \
 	$(EXAMPLES_SUBDIR) \
