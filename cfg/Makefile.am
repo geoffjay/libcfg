@@ -13,6 +13,8 @@ libcfg_0_1_la_SOURCES = \
 	json-node.vala \
 	xml-configuration.vala \
 	xml-node.vala \
+	yaml-configuration.vala \
+	yaml-node.vala \
 	$(NULL)
 
 INCLUDES = \
@@ -81,8 +83,7 @@ typelib_DATA = \
 	$(NULL)
 
 Cfg-0.1.typelib: Cfg-0.1.gir
-	@INTROSPECTION_COMPILER@ --debug --verbose \
-		--includedir=$(srcdir) --includedir=. \
+	@INTROSPECTION_COMPILER@ --includedir=$(srcdir) --includedir=. \
 		--shared-library=libcfg-0.1.so $^ -o $@
 endif
 

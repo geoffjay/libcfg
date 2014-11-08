@@ -69,6 +69,8 @@ PKG_CHECK_MODULES([JSON], [json-glib-1.0],
 
 AC_SUBST(VALA_PACKAGES)
 
+VALA_ADD_CHECKFILE([libyaml-glib/src/libyaml-glib-1.0.vapi])
+
 dnl ---------------------------------------------------------------------------
 dnl Build Options
 dnl ---------------------------------------------------------------------------

@@ -18,12 +18,12 @@ sed -e "s/%{ver}/$VER/" -e "s/%{rel}/$REL/" rpm/libcfg.spec > $RPMTOPDIR/SPECS/l
 git log --format="* %cd %aN%n- (%h) %s%d%n" --date=local | sed -r 's/[0-9]+:[0-9]+:[0-9]+ //' >> $RPMTOPDIR/SPECS/libcfg.spec
 
 # Build SRC and binary RPMs
-rpmbuild    --quiet                       \
-            --define "_topdir $RPMTOPDIR" \
-            --define "_rpmdir $PWD"       \
-            --define "_srcrpmdir $PWD"    \
-            --define '_rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm' \
-            -ba $RPMTOPDIR/SPECS/libcfg.spec &&
+rpmbuild --quiet                       \
+         --define "_topdir $RPMTOPDIR" \
+         --define "_rpmdir $PWD"       \
+         --define "_srcrpmdir $PWD"    \
+         --define '_rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm' \
+         -ba $RPMTOPDIR/SPECS/libcfg.spec &&
 
 rm -rf $RPMTOPDIR &&
 echo Done
