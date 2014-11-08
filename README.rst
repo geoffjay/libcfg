@@ -1,0 +1,8 @@
+libcfg
+======
+
+A library for working with configuration files. The end goal is something that
+allows you to create custom configurations of different markup languages that
+can be used as one meta-configuration in a project through a registration
+system. The concept was borrowed from how Rygel handles the different
+configurations that it uses accross libraries, plugins, and applications.
