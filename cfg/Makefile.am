@@ -6,8 +6,9 @@ lib_LTLIBRARIES = \
 
 libcfg_0_1_la_SOURCES = \
 	configuration.vala \
-	node.vala \
 	error.vala \
+	node.vala \
+	namespace.vala \
 	json-configuration.vala \
 	json-node.vala \
 	xml-configuration.vala \

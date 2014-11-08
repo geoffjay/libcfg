@@ -30,6 +30,8 @@ public interface Cfg.Configuration : GLib.Object {
      */
     public abstract string filename { get; set; }
 
+    public abstract string ns { get; set; }
+
     /**
      * Specifies whether the configuration file is open.
      */
@@ -43,7 +45,7 @@ public interface Cfg.Configuration : GLib.Object {
     /**
      * Emitted when any of the namespace settings have changed.
      */
-    public signal void ns_changed (string ns, string key);
+    public signal void namespace_changed (string ns, string key);
 
     /**
      * Emitted when some setting has changed within a namespace.
@@ -59,60 +61,65 @@ public interface Cfg.Configuration : GLib.Object {
     /**
      * FIXME: Needs documentation.
      */
-    public abstract void load () throws Cfg.FileError;
+    public abstract void open () throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract void save () throws Cfg.FileError;
+    public abstract void close () throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract void save_as (string filename) throws Cfg.Error;
+    public abstract void save () throws GLib.Error;
+
+    /**
+     * FIXME: Needs documentation.
+     */
+    public abstract void save_as (string filename) throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
     public abstract void register_ns (string prefix,
                                       string ns_uri)
-                                      throws Cfg.Error;
+                                      throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract uchar[] serialize () throws Cfg.Error;
+    public abstract uchar[] serialize () throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
     public abstract int get_int (string ns,
                                  string key)
-                                 throws Cfg.Error;
+                                 throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
     public abstract Gee.ArrayList<int> get_int_list (string ns,
                                                 string key)
-                                                throws Cfg.Error;
+                                                throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract string get_string (string ns, string key) throws Cfg.Error;
+    public abstract string get_string (string ns, string key) throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
     public abstract Gee.ArrayList<string> get_string_list (string ns,
-                                                      string key)
-                                                      throws Cfg.Error;
+                                                           string key)
+                                                           throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract int get_bool (string ns, string key) throws Cfg.Error;
+    public abstract int get_bool (string ns, string key) throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
@@ -120,17 +127,17 @@ public interface Cfg.Configuration : GLib.Object {
      */
     public abstract Gee.ArrayList<bool> get_bool_list (string ns,
                                                   string key)
-                                                  throws Cfg.Error;
+                                                  throws GLib.Error;
 
     /**
      * FIXME: Needs documentation.
      */
-    public abstract int get_double (string ns, string key) throws Cfg.Error;
+    public abstract int get_double (string ns, string key) throws GLib.Error;
 
     /* FIXME: or don't, a list of doubles may be useless anyways */
     /*
      *public abstract Gee.ArrayList<double> get_double_list (string ns,
      *                                                  string key)
-     *                                                  throws Cfg.Error;
+     *                                                  throws GLib.Error;
      */
 }
