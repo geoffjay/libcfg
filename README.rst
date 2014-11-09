@@ -10,3 +10,6 @@ configurations that it uses accross libraries, plugins, and applications.
 .. image:: https://readthedocs.org/projects/libcfg/badge/?version=latest
     :target: https://readthedocs.org/projects/libcfg/?badge=latest
     :alt: Documentation Status
+
+.. image:: https://travis-ci.org/geoffjay/libcfg.svg
+    :target: https://travis-ci.org/geoffjay/libcfg
