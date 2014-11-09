@@ -8,5 +8,5 @@ system. The concept was borrowed from how Rygel handles the different
 configurations that it uses accross libraries, plugins, and applications.
 
 .. image:: https://readthedocs.org/projects/libcfg/badge/?version=latest
-:target: https://readthedocs.org/projects/libcfg/?badge=latest
-:alt: Documentation Status
+    :target: https://readthedocs.org/projects/libcfg/?badge=latest
+    :alt: Documentation Status
