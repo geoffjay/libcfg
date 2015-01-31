@@ -7,6 +7,7 @@ AC_INIT([libcfg], [0.1.0], [geoff.jay@gmail.com], [libcfg])
 AC_CONFIG_SRCDIR([cfg/Makefile.am])
 AC_CONFIG_HEADER(config.h)
 AC_CONFIG_MACRO_DIR(m4)
+AC_CONFIG_SUBDIRS([lib/libyaml-glib])
 AM_INIT_AUTOMAKE(dist-xz)
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
@@ -116,6 +117,7 @@ GOBJECT_INTROSPECTION_CHECK([0.9.0])
 
 AC_OUTPUT([Makefile
            cfg-0.1.pc
+           lib/Makefile
            cfg/Makefile
            docs/Makefile
            examples/Makefile

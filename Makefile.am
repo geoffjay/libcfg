@@ -14,6 +14,7 @@ EXAMPLES_SUBDIR = \
 endif
 
 SUBDIRS = \
+	lib \
 	cfg \
 	vapi \
 	$(DOC_SUBDIR) \
