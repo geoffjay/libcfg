@@ -1,0 +1,8 @@
+# GLIB - Library of useful C routines
+
+# initialize variables for unconditional += appending
+EXTRA_DIST =
+EXAMPLE_PROGS =
+
+# useful constants
+NULL =
